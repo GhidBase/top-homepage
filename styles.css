@@ -1,10 +1,16 @@
+:root {
+    font-family: "roboto";
+}
+
+
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: rgb(6, 68, 139);
-    height: 500px;
+    /* background-color: rgb(6, 68, 139); */
+    height: 800px;
     display: flex;
     padding: 60px;
 }
@@ -13,8 +19,17 @@ header * {
     height: 100%;
 }
 
+.header-background {
+    background-color: rgb(6, 68, 139);
+    height: 1000px;
+    width: 150%;
+    transform-origin: bottom left;
+    transform: rotate(-.025turn) translate(-100px, -15%);
+    position: absolute;
+}
+
 .portrait-container {
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0px 0px 12px black;
 }
 
@@ -22,6 +37,7 @@ header * {
     box-sizing: border-box;
     padding: 40px 0;
     flex: 1;
+    z-index: 1;
 }
 
 .header-description {
@@ -32,6 +48,8 @@ header * {
     padding: 40px;
     box-sizing: border-box;
     box-shadow: 0px 0px 12px black;
+
+    font-size: 30px;
 }
 
 header h1 {
