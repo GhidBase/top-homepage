@@ -1,7 +1,12 @@
 :root {
     font-family: "roboto";
+
+    --side-margin: 60px;
 }
 
+h1 {
+    font-size: 60px;
+}
 
 body {
     margin: 0;
@@ -9,13 +14,12 @@ body {
 }
 
 header {
-    /* background-color: rgb(6, 68, 139); */
     height: 800px;
     display: flex;
-    padding: 60px;
+    padding: var(--side-margin);
 }
 
-header * {
+header .portrait-container img {
     height: 100%;
 }
 
@@ -24,7 +28,7 @@ header * {
     height: 1000px;
     width: 150%;
     transform-origin: bottom left;
-    transform: rotate(-.025turn) translate(-100px, -15%);
+    transform: rotate(-0.025turn) translate(-100px, -15%);
     position: absolute;
 }
 
@@ -33,16 +37,26 @@ header * {
     box-shadow: 0px 0px 12px black;
 }
 
+.portrait-container p {
+    position: relative;
+    bottom: 120px;
+    left: 0px;
+    font-size: 80px;
+    margin: 0;
+    padding: 0 60px;
+    text-align: center;
+}
+
 .description-spacing {
     box-sizing: border-box;
     padding: 40px 0;
-    flex: 1;
     z-index: 1;
 }
 
 .header-description {
     background-color: white;
 
+    height: 100%;
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -52,12 +66,69 @@ header * {
     font-size: 30px;
 }
 
-header h1 {
+.header-description p {
+    flex: 1;
+}
+
+.header-description h1 {
     height: 50px;
 }
 
-header .links {
+.header-description .links {
     height: 50px;
     display: flex;
     justify-content: end;
+}
+
+.links button {
+    width: 50px;
+}
+
+main {
+    padding: var(--side-margin);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px;
+    width: 100%;
+    gap: 40px;
+    position: relative;
+}
+
+.project img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project {
+    position: relative;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.541);
+}
+
+.project .details {
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.project .header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.project h2 {
+    flex: 1;
+}
+
+.project .header img {
+    height: 100px;
+    width: auto;
 }
