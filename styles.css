@@ -91,7 +91,7 @@ main {
 .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 400px;
+    grid-template-rows: 750px;
     width: 100%;
     gap: 40px;
     position: relative;
@@ -110,25 +110,37 @@ main {
 
 .project .details {
     position: absolute;
-    height: 100px;
+    height: 300px;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .project .header {
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0px 20px;
+    gap: 14px;
+    height: 70px;
 }
 
 .project h2 {
     flex: 1;
+    font-size: 30px;
+    text-wrap: nowrap;
 }
 
-.project .header img {
-    height: 100px;
+.project .header button {
+    height: calc(100% - 20px);
     width: auto;
+}
+
+.project .details .description {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 20px;
 }
