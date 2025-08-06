@@ -144,3 +144,12 @@ main {
     padding: 0 20px;
     font-size: 20px;
 }
+
+footer {
+    background-color: rgb(6, 68, 139);
+    padding: var(--side-margin);
+}
+
+footer h1 {
+    margin: 0;
+}
