@@ -146,10 +146,42 @@ main {
 }
 
 footer {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
     background-color: rgb(6, 68, 139);
     padding: var(--side-margin);
+    min-height: 900px;
+    color: white;
+    grid-template-columns: 1fr 1.3fr;
 }
 
 footer h1 {
     margin: 0;
+}
+
+footer p {
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+}
+
+footer .left img {
+    height: 2em;
+    margin-right: 10px;
+}
+
+.sosh-meed {
+    display: flex;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+footer .left .sosh-meed img {
+    height: 5em;
+}
+
+footer .right img{
+    max-width: 100%;
 }
