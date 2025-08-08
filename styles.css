@@ -4,6 +4,12 @@
     --side-margin: 60px;
 }
 
+@media (max-width: 1000px) {
+    :root {
+        --side-margin: 40px;
+    }
+}
+
 h1 {
     font-size: 60px;
 }
@@ -11,6 +17,7 @@ h1 {
 body {
     margin: 0;
     overflow-x: hidden;
+    width: 100dvw;
 }
 
 header {
@@ -92,8 +99,8 @@ main {
 
 .projects-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 750px;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+    grid-template-rows: repeat(auto-fill, 750px);
     width: 100%;
     gap: 40px;
     position: relative;
@@ -117,9 +124,10 @@ main {
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: white;
+    background-color: rgb(235, 233, 233);
     display: flex;
     flex-direction: column;
+    border-top: 1px solid black;
 }
 
 .project .header {
@@ -145,6 +153,35 @@ main {
     flex: 1;
     padding: 0 20px;
     font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .projects-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: repeat(auto-fill, 500px);
+    }
+    .project .details {
+        height: 300px;
+    }
+
+    .project .details .description {
+        font-size: 16px;
+        overflow-y: scroll;
+    }
+
+    .project .header {
+        height: 45px;
+    }
+
+    .project h2 {
+        margin: 0 0;
+        font-size: 18px;
+    }
+
+    .project>img {
+        height: 400px;
+        /* width: 200px; */
+    }
 }
 
 footer {
@@ -184,6 +221,6 @@ footer .left .sosh-meed img {
     height: 5em;
 }
 
-footer .right img{
+footer .right img {
     max-width: 100%;
 }
