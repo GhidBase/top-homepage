@@ -135,7 +135,7 @@ main {
     text-wrap: nowrap;
 }
 
-.project .header button {
+.project .header a {
     height: calc(100% - 20px);
     width: auto;
 }
