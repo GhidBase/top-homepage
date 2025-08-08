@@ -76,13 +76,14 @@ header .portrait-container img {
 }
 
 .header-description .links {
-    height: 50px;
+    height: 70px;
     display: flex;
     justify-content: end;
+    gap: 28px;
 }
 
-.links button {
-    width: 50px;
+.links a {
+    width: 70px;
 }
 
 main {
