@@ -10,6 +10,7 @@ body {
 
 header {
     padding: 70px var(--side-margin);
+    display: flex;
 }
 
 #portrait-container {
@@ -77,3 +78,47 @@ header {
     }
 }
 
+header .description {
+    margin: 40px 0;
+    background-color: grey;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+header .description h1 {
+    margin: 4px;
+    font-size: 60px;
+}
+
+header .description p {
+    flex: 1;
+    font-size: 24px;
+}
+
+header .links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .links img {
+    height: 60px;
+}
+
+@media (max-width: 1410px) {
+    header {
+        display: block;
+    }
+
+    #portrait-container {
+        float: left;
+        margin: -20px 20px 0px -20px;
+    }
+
+    header .description {
+        display: block;
+        /* margin: 20px; */
+    }
+
+
+}
