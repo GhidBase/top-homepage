@@ -1,2 +1,15 @@
-Currently working on adding
-- My Project images aren't aligned in the same places. I have to figure out how to fix that
+I want my portrait to use clamp.
+
+try to be as tall as the container
+but when the width of the img is larger
+than the portrait-container width
+what should I do?
+
+I want it to not pass the size of whats available
+within the portrait-container, which is just the
+space within 240px of padding
+
+How can I base the height of the img on the
+max-height of the portrait-container but also
+prevent it from scaling when that would cause
+the width to get too large?
