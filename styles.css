@@ -6,6 +6,7 @@
 body {
     margin: 0;
     width: 100dvw;
+    overflow-x: hidden;
 }
 
 header {
@@ -35,6 +36,7 @@ header {
     width: 100%;
     text-align: center;
     font-size: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 header .description {
@@ -67,12 +69,12 @@ header .links img {
 
 .header-background {
     z-index: -1;
-    position: fixed;
+    position: absolute;
 
     background-color: rgb(96, 79, 69);
-    height: 820px;
+    height: 870px;
     width: 100dvw;
-    top: -200px;
+    top: -250px;
     left: 0;
     transform: skew(0deg, -14deg);
 }
@@ -94,6 +96,11 @@ header .links img {
 
     #portrait-container p {
         font-size: calc(5px + 4dvw);
+        top: 5%;
+        left: 60%;
+        bottom: initial;
+        font-size: 60px;
+        width: 400px;
     }
 
     header .description {
@@ -106,7 +113,6 @@ header .links img {
         text-align: center;
     }
 
-    
     .header-background {
         height: 700px;
     }
