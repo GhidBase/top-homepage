@@ -18,6 +18,7 @@ header {
     max-width: 80dvw;
     aspect-ratio: 1/1;
     position: relative;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
 }
 
 #portrait-container img {
@@ -38,7 +39,8 @@ header {
 
 header .description {
     margin: 40px 0;
-    background-color: grey;
+    background-color: white;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -63,9 +65,20 @@ header .links img {
     height: 60px;
 }
 
+.header-background {
+    z-index: -1;
+    position: fixed;
+
+    background-color: rgb(96, 79, 69);
+    height: 820px;
+    width: 100dvw;
+    top: -200px;
+    left: 0;
+    transform: skew(0deg, -14deg);
+}
+
 @media (max-width: 1370px) and (min-width: 650px) {
     header {
-
         display: block;
         padding: 80px;
         padding-top: 140px;
@@ -76,14 +89,11 @@ header .links img {
     #portrait-container {
         float: left;
         margin: -80px 20px 0px -20px;
-        /* height: 350px; */
         height: calc(100px + 20dvw);
     }
 
     #portrait-container p {
-        /* font-size: 50px */
-        font-size: calc(5px + 4dvw)
-        /* top: 0 */
+        font-size: calc(5px + 4dvw);
     }
 
     header .description {
@@ -95,6 +105,11 @@ header .links img {
         font-size: clamp(40px, calc(6vw - 5px), 60px);
         text-align: center;
     }
+
+    
+    .header-background {
+        height: 700px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -102,6 +117,7 @@ header .links img {
         margin-top: 0;
         background-color: rgba(255, 255, 255, 0);
         padding: 0;
+        box-shadow: none;
     }
 
     header .description h1 {
@@ -124,5 +140,9 @@ header .links img {
 
     #portrait-container p {
         font-size: calc(5px + 11dvw);
+    }
+
+    .header-background {
+        height: 700px;
     }
 }
