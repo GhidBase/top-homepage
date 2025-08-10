@@ -14,8 +14,8 @@ header {
 }
 
 #portrait-container {
-    height: 70dvh;
-    max-width: 50dvw;
+    height: 650px;
+    max-width: 80dvw;
     aspect-ratio: 1/1;
     position: relative;
 }
@@ -48,8 +48,8 @@ header {
     }
 
     #portrait-container {
-        max-width: 70dvw;
-        height: 55dvh;
+        /* max-width: 70dvw; */
+        height: 520px;
     }
 
     #portrait-container p {
@@ -69,8 +69,8 @@ header {
     }
 
     #portrait-container {
-        max-width: 70dvw;
-        height: 40dvh;
+        /* max-width: 70dvw; */
+        height: 370px;
     }
 
     #portrait-container p {
@@ -105,9 +105,10 @@ header .links img {
     height: 60px;
 }
 
-@media (max-width: 1410px) {
+@media (max-width: 1410px) and (min-width: 950px) {
     header {
         display: block;
+        padding: 80px;
     }
 
     #portrait-container {
@@ -117,8 +118,17 @@ header .links img {
 
     header .description {
         display: block;
-        /* margin: 20px; */
     }
 
+    header .description h1 {
+        font-size: 50px;
+    }
+}
 
+@media (max-width: 950px) {
+    header .description {
+        margin-top: 0;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 0;
+    }
 }
