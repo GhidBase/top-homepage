@@ -122,6 +122,17 @@ header .links img {
 }
 
 @media (max-width: 650px) {
+    :root {
+        --side-margin: 0px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
     header .description {
         margin-top: 0;
         background-color: rgba(255, 255, 255, 0);
@@ -138,18 +149,10 @@ header .links img {
         margin-top: 4px;
     }
 
-    :root {
-        --side-margin: 30px;
-    }
-
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     #portrait-container {
         height: 520px;
+        width: 100%;
+        max-width: 100%;
     }
 
     #portrait-container p {
@@ -189,6 +192,7 @@ main {
     height: 40%;
     width: 100%;
     object-fit: cover;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .project .details {
@@ -200,14 +204,19 @@ main {
 
 .project .details .header {
     display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
 }
 
 .project .details .header h2 {
     margin: 0;
+    font-size: 18px;
+    margin-right: auto;
 }
 
 .project .details .header img {
-    height: 20px;
+    height: 1.8em;
 }
 
 @media (max-width: 1370px) {
@@ -234,11 +243,16 @@ main {
 
 @media (max-width: 650px) {
     main {
-        padding-top: 0;
+        padding: 0 30px;
+    }
+
+    main h1,
+    main .projects-container {
+        max-width: 100%;
     }
 
     .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-template-rows: 800px 800px;
+        grid-auto-rows: 600px;
     }
 }
