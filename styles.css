@@ -61,6 +61,7 @@ header .description p {
 header .links {
     display: flex;
     justify-content: flex-end;
+    gap: 20px;
 }
 
 header .links img {
@@ -127,7 +128,12 @@ header .links img {
     }
 
     header .description h1 {
+        margin: 20px 0 4px 0;
         text-align: center;
+    }
+
+    header .description p {
+        margin-top: 4px;
     }
 
     :root {
@@ -150,5 +156,9 @@ header .links img {
 
     .header-background {
         height: 700px;
+    }
+
+    header .links {
+        justify-content: center;
     }
 }
