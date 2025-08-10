@@ -9,6 +9,8 @@ body {
     overflow-x: hidden;
 }
 
+/* ====== HEADER RELATED STUFF ===== */
+
 header {
     padding: 70px var(--side-margin);
     display: flex;
@@ -160,5 +162,63 @@ header .links img {
 
     header .links {
         justify-content: center;
+    }
+}
+
+/* ====== HEADER RELATED STUFF ===== */
+
+/* ====== MAIN RELATED STUFF ===== */
+
+main {
+    padding: var(--side-margin);
+}
+
+.projects-container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 600px 600px;
+    gap: 30px;
+}
+
+.project {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
+}
+
+.project > img {
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project .details {
+    box-sizing: border-box;
+    background-color: white;
+    padding: 20px;
+    height: 60%;
+}
+
+.project .details .header {
+    display: flex;
+}
+
+.project .details .header h2 {
+    margin: 0;
+}
+
+.project .details .header img {
+    height: 20px;
+}
+
+@media (max-width: 1370px) {
+    main {
+        padding: 0 var(--side-margin);
+    }
+}
+
+@media (max-width: 650px) {
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: 800px 800px;
     }
 }
